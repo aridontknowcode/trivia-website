@@ -1,0 +1,216 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.non-scrollable {
+    overflow-y: hidden;
+}
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 99vh;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.typewrite {
+    text-decoration: none;
+    color: #ffff;
+    font-family: "Anonymous Pro", monospace;
+}
+
+.center-content .button {
+    font-family: monospace;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.button a {
+    color: white;
+    font-family: "Anonymous Pro", monospace;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ffa12b;
+    display: block;
+    position: relative;
+    padding: 9px 19px;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+    -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+    box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.button a:active {
+    top: 10px;
+    background-color: #f78900;
+
+    -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
+    -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #915100;
+    box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
+}
+
+#content {
+    transition: background-color 0.5s ease-in-out; /* 1s duration with ease transition */
+    cursor: pointer;
+}
+
+.button:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: transparent;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.answers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-button a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+.add-button button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    padding: 15px 40px;
+    color: #fff;
+}
+a.nav-link.username {
+    color: rgb(239, 255, 148);
+}
+
+.add-button button:hover {
+    transition: background-color 0.5s ease-in-out;
+    background-color: #343a40;
+}
+
+#success-alert {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#success-alert.hidden {
+    opacity: 0;
+}
+
+.point {
+    position: absolute;
+    margin-bottom: 10%;
+}
+
+.glow-false {
+    font-size: 1.75rem;
+    color: #ff5454;
+    text-align: center;
+    animation: glow-false 1s ease-in-out infinite alternate;
+    transition: 0.5s ease-in-out;
+}
+@-webkit-keyframes glow-false {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff1420,
+            0 0 40px #ff1420, 0 0 50px #ff1420, 0 0 60px #ff1420,
+            0 0 70px #ff1420;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fd2f3a, 0 0 40px #fd2f3a,
+            0 0 50px #fd2f3a, 0 0 60px #fd2f3a, 0 0 70px #fd2f3a,
+            0 0 80px #fd2f3a;
+    }
+}
+
+.glow-correct {
+    font-size: 1.75rem;
+    color: #1eff00;
+    text-align: center;
+    animation: glow-true 1s ease-in-out infinite alternate;
+    transition: 0.5s ease-in-out;
+}
+
+@-webkit-keyframes glow-true {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1a8400,
+            0 0 40px #1a8400, 0 0 50px #1a8400, 0 0 60px #1a8400,
+            0 0 70px #1a8400;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #2ee600, 0 0 40px #2ee600,
+            0 0 50px #2ee600, 0 0 60px #2ee600, 0 0 70px #2ee600,
+            0 0 80px #2ee600;
+    }
+}
